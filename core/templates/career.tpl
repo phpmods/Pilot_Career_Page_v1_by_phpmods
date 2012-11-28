@@ -1,3 +1,13 @@
+<?php
+///////////////////////////////////////////////
+///   PilotCareer_Page v1 by php-mods.eu    ///
+///            Author php-mods.eu           ///
+///           Packed at 27/11/2012          ///
+///     Copyright (c) 2012, php-mods.eu     ///
+///////////////////////////////////////////////
+
+?>
+
 <h3>Pilot Ranks</h3>
 <table id="tabledlist" class="tablesorter">
 <thead>
