@@ -14,8 +14,8 @@
 	<th>Rank Title</th>
     <th>Minimum Hours</th>
     <th>Pay Rate/Hour</th>
+	<th>Can Fly</th>
 	<th>Rank Image</th>
-	<th>Aircrafts</th>
 	</tr>
 </thead>
 <tbody>
@@ -24,10 +24,9 @@ foreach($ranks as $rank)
 {
 ?>
 <tr id="row<?php echo $rank->rankid;?>">
-	<td align="center" width="20%"><?php echo $rank->rank; ?></td>
-    <td align="center" width="30$"><?php echo $rank->minhours; ?></td>
-    <td align="center" width="30%"><?php echo $rank->payrate; ?></td>
-	<td align="center" width="20%"><img src="<?php echo $rank->rankimage; ?>" /></td>
+	<td align="center" width="30%"><?php echo $rank->rank; ?></td>
+    <td align="center" width="15%"><?php echo $rank->minhours; ?></td>
+    <td align="center" width="20%">$<?php echo $rank->payrate; ?>/hr</td>
 	<td align="center" width="20%"> 
     <?php $rankai = CareerData::getaircrafts($rank->rankid); 
 if(!$rankai)
@@ -36,6 +35,7 @@ if(!$rankai)
 foreach($rankai as $ran)
 {
 ?><?php echo $ran->icao; ?> <?php } } ?></td>
+	<td align="center" width="25%"><img src="<?php echo $rank->rankimage; ?>" /></td>
 	</tr>
 <?php
 }
