@@ -1,13 +1,12 @@
 <?php
 ///////////////////////////////////////////////
-///   PilotCareer_Page v1 by php-mods.eu    ///
+///  Pilot Career Page v1.1 by php-mods.eu  ///
 ///            Author php-mods.eu           ///
-///           Packed at 27/11/2012          ///
-///     Copyright (c) 2012, php-mods.eu     ///
+///            Packed at 3/1/2013           ///
+///     Copyright (c) 2013, php-mods.eu     ///
 ///////////////////////////////////////////////
 
 ?>
-
 <h3>Pilot Ranks</h3>
 <table id="tabledlist" class="tablesorter">
 <thead>
@@ -16,6 +15,7 @@
     <th>Minimum Hours</th>
     <th>Pay Rate/Hour</th>
 	<th>Rank Image</th>
+	<th>Aircrafts</th>
 	</tr>
 </thead>
 <tbody>
@@ -28,6 +28,14 @@ foreach($ranks as $rank)
     <td align="center" width="30$"><?php echo $rank->minhours; ?></td>
     <td align="center" width="30%"><?php echo $rank->payrate; ?></td>
 	<td align="center" width="20%"><img src="<?php echo $rank->rankimage; ?>" /></td>
+	<td align="center" width="20%"> 
+    <?php $rankai = CareerData::getaircrafts($rank->rankid); 
+if(!$rankai)
+            {echo 'All the aircraft';}
+            else {
+foreach($rankai as $ran)
+{
+?><?php echo $ran->icao; ?> <?php } } ?></td>
 	</tr>
 <?php
 }

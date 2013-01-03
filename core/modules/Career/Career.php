@@ -1,9 +1,9 @@
 <?php
 ///////////////////////////////////////////////
-///   PilotCareer_Page v1 by php-mods.eu    ///
+///  Pilot Career Page v1.1 by php-mods.eu  ///
 ///            Author php-mods.eu           ///
-///           Packed at 27/11/2012          ///
-///     Copyright (c) 2012, php-mods.eu     ///
+///            Packed at 3/1/2013           ///
+///     Copyright (c) 2013, php-mods.eu     ///
 ///////////////////////////////////////////////
 
 class Career extends CodonModule {
