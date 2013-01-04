@@ -10,4 +10,4 @@ This module created by phpmods and can be used only with phpVMS (www.phpvms.net)
 Registered Under Creative Commons Attribution-Noncommercial-Share Alike  3.0 Unported License
 
 Version 1.0 (27.11.2012) - Module Created
-Version 1.1 (03.01.2012) - Module Updated; Added the aicraft column on the ranks table
+Version 1.1 (03.01.2013) - Module Updated; Added the aicraft column on the ranks table
