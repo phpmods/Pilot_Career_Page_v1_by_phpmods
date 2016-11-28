@@ -45,7 +45,14 @@
 	</tr>
 </thead>
 <tbody>
-<?php foreach($generaward as $gen) { ?>
+<?php
+  if(!$generaward)
+        {echo 'There are no awards at this time!';}
+            else
+            {
+foreach($generaward as $gen)
+{ ?>
+<?php } ?>
 <tr>
 	<td align="center" width="20%"><?php echo $gen->name; ?></td>
     <td align="center" width="60%"><?php echo $gen->descrip; ?></td>
