@@ -40,24 +40,19 @@
 <thead>
 <tr>
 	<th>Award</th>
-    <th>Description</th>
+    	<th>Description</th>
 	<th>Image</th>
 	</tr>
 </thead>
 <tbody>
-<?php
-  if(!$generaward)
-        {echo 'There are no awards at this time!';}
-            else
-            {
-foreach($generaward as $gen)
-{ ?>
-<?php } ?>
+<?php if(!$generaward) {echo '<tr><td align="center" colspan="3">There are no awards at this time!</td></tr>';} 
+else {
+foreach($generaward as $gen) { ?>
 <tr>
 	<td align="center" width="20%"><?php echo $gen->name; ?></td>
-    <td align="center" width="60%"><?php echo $gen->descrip; ?></td>
+    	<td align="center" width="60%"><?php echo $gen->descrip; ?></td>
 	<td align="center" width="20%"><img src="<?php echo $gen->image; ?>" title="<?php echo $gen->name; ?>" /></td>
 </tr>
-<?php } ?>
+<?php } } ?>
 </tbody>
 </table>
