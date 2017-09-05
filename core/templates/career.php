@@ -31,7 +31,7 @@
 			$i = 0;
 			foreach($rankai as $ran) {
 				$i++;
-				if($i > 2) echo ', ';
+				if($i > 1) echo ', ';
 				echo $ran->icao;
 			} 
 		} ?></td>
