@@ -22,13 +22,18 @@
 <?php foreach($ranks as $rank) { ?>
 <tr>
 	<td align="center" width="30%"><?php echo $rank->rank; ?></td>
-    <td align="center" width="15%"><?php echo $rank->minhours; ?></td>
-    <td align="center" width="20%">$<?php echo $rank->payrate; ?>/hr</td>
+	<td align="center" width="15%"><?php echo $rank->minhours; ?></td>
+	<td align="center" width="20%">$<?php echo $rank->payrate; ?>/hr</td>
 	<td align="center" width="20%"> 
-    <?php $rankai = CareerData::getaircrafts($rank->rankid); 
+		<?php $rankai = CareerData::getaircrafts($rank->rankid); 
 		if(!$rankai) {echo 'All the aircraft';}
 		else {
-			foreach($rankai as $ran) {echo $ran->icao;} 
+			$i = 0;
+			foreach($rankai as $ran) {
+				$i++;
+				if($i > 2) echo ', ';
+				echo $ran->icao;
+			} 
 		} ?></td>
 	<td align="center" width="25%"><img src="<?php echo $rank->rankimage; ?>" title="<?php echo $rank->rank; ?>" /></td>
 </tr>
